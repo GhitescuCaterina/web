@@ -1,0 +1,126 @@
+:root {
+  --dgreen: #163020;
+  --lgreen: #304D30;
+  --grey: #b4c6b4;
+  --lgrey: #D9D9D9;
+}
+
+body {
+    background-color: rgb(22, 48, 32, 0.5);
+    background-image: url('../pictures/car2.png');
+    background-size: 50% auto;
+    background-position: center;
+    background-size: cover;
+    margin: 0; /* Remove default margin */
+    overflow: hidden; 
+}
+
+
+.container {
+	display: flex;
+    flex-direction: row;
+    height: 100vh; /* Full viewport height */
+    align-items: center; /* Center items vertically */
+    justify-content: center;
+}
+
+.stanga, .dreapta {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    width: 45vw; /* Adjust width to prevent overflow */
+    padding: 20px; /* Padding to prevent content touching the borders */
+}
+
+.dreapta {
+    font-family: 'Raleway', sans-serif;
+    background-color: rgba(97, 97, 97, 0.75);
+    border-radius: 10px;
+    max-width: 43%; /* Adjusted width */
+    box-shadow: 4px 4px 4px rgb(71, 71, 71);
+}
+
+.contact {
+	position: absolute;
+    top: 0; 
+    right: 0; 
+    display: flex;
+    justify-content: flex-end; 
+    padding: 20px;
+	flex-direction: row;
+	display: flex;
+}
+
+.functii {
+	position: absolute; 
+    bottom: 0; 
+    right: 0; 
+    justify-content: flex-end;
+    padding: 20px;
+	flex-direction: row;
+	display: flex;
+}
+
+button {
+	color: var(--dgreen);
+	font-family: 'Raleway', sans-serif;
+	box-shadow: 1px 2px 4px gray;
+	font-size: 30px;
+	margin-right: 3%;
+
+	background-color: #b0b8ac;
+	border: 3px solid #535353;
+	border-radius: 20px;
+
+	width: 18rem;
+	height: 5rem;
+
+	cursor: pointer;
+	margin-bottom: 2rem;
+	transition: background-color 0.5s;
+}
+
+button:hover {
+	background-color:#535353;
+	color: #b0b8ac;
+}
+
+button:active {
+	opacity: 0.7;
+}
+
+.descriere {
+	color: var(--lgrey);
+	text-shadow: 1px 2px 4px black;
+	font-family: 'Raleway', sans-serif;
+	font-size: 25px;
+
+}
+
+.logo-image {
+    width: 80%; /* Maintain consistent sizing */
+    height: auto;
+	padding-bottom: 2%;
+}
+
+
+
+@media(max-width: 900px) {
+	.container {
+		flex-direction: column;
+	}
+
+	.stanga, .dreapta {
+		width: 90vw;
+	}
+}
+
+@media(max-width: 500px) {
+	button {
+		width: 14rem;
+		height: 4rem;
+
+	}
+}
