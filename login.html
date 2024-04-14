@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="shortcut icon" href="pictures/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="styles/login.css" />
+  </head>
+  <body>
+    <div class="login">
+      <div class="rectangle1">
+        <h1 class="title">Login </h1>
+        <section>
+          <p>E-mail</p>
+          <input type="text" name="email" />
+        </section>
+        <section>
+          <p>Password</p>
+          <input type="password" name="password" />
+        </section>
+        <button onclick="window.location ='main_page.html'">login</button>
+        <div class="signup-section">
+          <p>Don't have an account?</p>
+          <button id="signup-button" onclick="window.location ='signup.html'">
+            sign up
+          </button>
+        </div>
+      </div>
+      <div class="rectangle2">
+        <img id="car-logo" src="pictures/car-logo.png" alt="login" />
+      </div>
+    </div>
+  </body>
+</html>

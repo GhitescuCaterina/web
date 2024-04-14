@@ -11,7 +11,7 @@ body {
     background-size: 50% auto;
     background-position: center;
     background-size: cover;
-    margin: 0; /* Remove default margin */
+    margin: 0; 
     overflow: hidden; 
 }
 
@@ -19,8 +19,8 @@ body {
 .container {
 	display: flex;
     flex-direction: row;
-    height: 100vh; /* Full viewport height */
-    align-items: center; /* Center items vertically */
+    height: 100vh; 
+    align-items: center; 
     justify-content: center;
 }
 
@@ -28,10 +28,10 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    width: 45vw; /* Adjust width to prevent overflow */
-    padding: 20px; /* Padding to prevent content touching the borders */
+    justify-content: center; 
+    align-items: center;
+    width: 45vw; 
+    padding: 20px; 
 }
 
 .dreapta {
@@ -40,6 +40,11 @@ body {
     border-radius: 10px;
     max-width: 43%; /* Adjusted width */
     box-shadow: 4px 4px 4px rgb(71, 71, 71);
+    transition: background-color 0.5s;
+}
+
+.dreapta:hover {
+    background-color: rgba(51, 51, 51, 0.9);
 }
 
 .contact {
@@ -64,7 +69,7 @@ body {
 }
 
 button {
-	color: var(--dgreen);
+	color: #313131;
 	font-family: 'Raleway', sans-serif;
 	box-shadow: 1px 2px 4px gray;
 	font-size: 30px;
@@ -100,7 +105,7 @@ button:active {
 }
 
 .logo-image {
-    width: 80%; /* Maintain consistent sizing */
+    width: 80%; 
     height: auto;
 	padding-bottom: 2%;
 }
