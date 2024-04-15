@@ -1,173 +1,161 @@
-:root {
-  --purple: #bbabdb;
-  --blue: #d6e5fa;
-  --pink: #d47da4;
-
-  --font-size-small: 20px;
-  --font-size-medium: 35px;
-  --font-size-large: 90px;
-
-  --font-nunito: 'Nunito';
-}
-
 body {
-	display: flex;
-    background: linear-gradient(270deg, var(--purple) 0%, var(--blue) 100%);
+  display: flex;
+  background: linear-gradient(90deg, #535353 0%, #b0b8ac 100%);
 }
 
 .signup {
-    display: flex;
-    background: linear-gradient(90deg, var(--purple) 0%, var(--blue) 100%);
-    border: 1px solid;
-    border-color: white;
-    box-shadow: 1px 2px 4px gray;
-    height: max-content;
-	min-height: 80vh;
-    width: 90vw;
-    border-radius: 30px;
-    margin-top: 3%;
-    margin-right: 6%;
-    margin-left: 6%;
-	margin-bottom: 3%;
-	flex-direction: column;
-	padding: 1rem;
-	justify-content: space-evenly;
+  max-width: 1200px;
+  margin: 30px;
+  background-color: #313131;
+  padding: 30px;
+  border-left: 5px solid #8ea38d;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 20px),
+    calc(100% - 20px) 100%,
+    0 100%
+  );
 }
 
 .title {
-    color: white;
-    font-family: "Raleway", sans-serif;
-    font-size: var(--font-size-large);
-    font-style: italic;
-    text-shadow: 1px 2px 4px gray;
-	align-self: center;
-	margin: 0rem;
+  display: block;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  font-size:3rem;
+  font-weight: 800;
+  margin-bottom: 4%;
+  margin-left: 12%;
+}
+
+.logo-image {
+  width: 25%;
+  height: auto;
+  align-self: center;
 }
 
 .stanga {
-	margin: 5vw;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	width: 65vw;
-	align-self: center;
+  margin: 5vw;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 65vw;
+  align-self: center;
 }
 
 .item {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
-	max-width: 70vw;
-	margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 70vw;
+  margin: auto;
 }
 
 input {
-    border: 1px solid white;
-    font-size: var(--font-size-medium);
-    font-family: "Raleway", sans-serif;
-	width: 40vw;
-    min-width: 40vw;
-	height: 2rem;
-    border-radius: 30px;
-    background-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 1px 2px 4px gray;
-    padding: 10px;
+  border: 1px solid rgb(83, 83, 83);
+  font-size: 1vw;
+  font-family: "Raleway", sans-serif;
+  width: 40vw;
+  min-width: 40vw;
+  height: 2rem;
+  background-color: rgba(255, 255, 255, 0.555);
+  padding: 10px;
 }
 
 input:focus {
-    outline: none;
-    background-color: white;
+  outline: none;
+  background-color: #b0b8ac;
 }
 
 p {
-    color: white;
-    font-family: "Raleway", sans-serif;
-    font-size: var(--font-size-medium);
-    text-shadow: 1px 2px 4px gray;
-    margin: 1rem;
+  color: #8ea38d;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 1.3vw;
+  text-shadow: 1px 2px 2px rgba(56, 56, 56, 0.507);
+  margin: 1rem;
 }
 
 .img {
-	width: 30px;
-	height: 30px;
-	
+  width: 30px;
+  height: 30px;
 }
 
 .buttons {
-	justify-content: space-evenly;
-	display: flex;
-	margin-top: 2rem;
-	margin-bottom: 2rem;
+  justify-content: space-evenly;
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 button {
-    font-size: var(--font-size-medium);
-    background-color: var(--pink);
-    border: 1px solid white;
-    color: white;
-    width: 14rem;
-    height: 4rem;
-    font-style: italic;
-    border-radius: 30px;
-    cursor: pointer;
-    box-shadow: 1px 2px 4px gray;
+  font-size: 1.5vw;
+  font-family: "Raleway", sans-serif;
+  background-color: #b0b8ac;
+  border: 3px solid #313131;
+  color: #313131;
+  width: 14rem;
+  height: 4rem;
+  cursor: pointer;
+  transition: 0.4s;
 }
 
 .login-button {
-    background-color: rgba(215, 127, 161, 0.4);
-    color: white;
-    margin-top: 0rem;
+  background-color: #b0b8ac;
+  color: #313131;
+  margin-top: 0rem;
 }
 
-button:hover, .signup-button:hover {
-	background-color: rgba(215, 127, 161, 0.1);
-    color: var(--pink);
+button:hover {
+    background-color: #535353;
+    border: 3px solid #535353;
+    color: #cbd4c7;
 }
 
 @media (max-width: 1250px) {
-	.signup {
-		height: max-content;
-	}
+  .signup {
+    height: max-content;
+  }
 }
 
 @media (max-width: 850px) {
-	.item {
-		flex-direction: column;
-	}
+  .item {
+    flex-direction: column;
+  }
 
-	p {
-		align-self: self-start;
-	}
+  p {
+    align-self: self-start;
+  }
 
-	.buttons {
-		margin-top: 2rem;
-	}
+  .buttons {
+    margin-top: 2rem;
+  }
 
-	button {
-		width: 10rem;
-	}
+  button {
+    width: 10rem;
+  }
 
-	input {
-		width: 60vw;
-	}
+  input {
+    width: 60vw;
+  }
 }
 
 @media (max-width: 450px) {
-	.title {
-		margin-top: 2rem;
-		font-size: var(--font-size-medium);
-	}
+  .title {
+    margin-top: 2rem;
+    font-size: var(--font-size-medium);
+  }
 
-	input {
-		font-size: var(--font-size-small);
-	}
+  input {
+    font-size: var(--font-size-small);
+  }
 
-	p {
-		font-size: var(--font-size-small);
-	}
+  p {
+    font-size: var(--font-size-small);
+  }
 
-	button {
-		font-size: var(--font-size-small);
-		width: 8rem;
-	}
+  button {
+    font-size: var(--font-size-small);
+    width: 8rem;
+  }
 }

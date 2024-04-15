@@ -1,131 +1,128 @@
 :root {
   --dgreen: #163020;
-  --lgreen: #304D30;
+  --lgreen: #304d30;
   --grey: #b4c6b4;
-  --lgrey: #D9D9D9;
+  --lgrey: #d9d9d9;
 }
 
 body {
-    background-color: rgb(22, 48, 32, 0.5);
-    background-image: url('../pictures/car2.png');
-    background-size: 50% auto;
-    background-position: center;
-    background-size: cover;
-    margin: 0; 
-    overflow: hidden; 
+  background-image: url("../pictures/car2.png");
+  background-size: 50% auto;
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+  overflow: hidden;
 }
-
 
 .container {
-	display: flex;
-    flex-direction: row;
-    height: 100vh; 
-    align-items: center; 
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
 
-.stanga, .dreapta {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;
-    width: 45vw; 
-    padding: 20px; 
+.stanga,
+.dreapta {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45vw;
+  padding: 20px;
 }
 
 .dreapta {
-    font-family: 'Raleway', sans-serif;
-    background-color: rgba(97, 97, 97, 0.75);
-    border-radius: 10px;
-    max-width: 43%; /* Adjusted width */
-    box-shadow: 4px 4px 4px rgb(71, 71, 71);
-    transition: background-color 0.5s;
+  font-family: "Raleway", sans-serif;
+  background-color: rgba(97, 97, 97, 0.75);
+  border-radius: 10px;
+  max-width: 43%;
+  box-shadow: 4px 4px 4px rgb(65, 65, 65);
+  transition: background-color 0.5s;
 }
 
 .dreapta:hover {
-    background-color: rgba(51, 51, 51, 0.9);
+  background-color: rgba(51, 51, 51, 0.9);
+  box-shadow: 4px 4px 4px rgb(43, 43, 43);
 }
 
 .contact {
-	position: absolute;
-    top: 0; 
-    right: 0; 
-    display: flex;
-    justify-content: flex-end; 
-    padding: 20px;
-	flex-direction: row;
-	display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+  flex-direction: row;
+  display: flex;
 }
 
 .functii {
-	position: absolute; 
-    bottom: 0; 
-    right: 0; 
-    justify-content: flex-end;
-    padding: 20px;
-	flex-direction: row;
-	display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  justify-content: flex-end;
+  padding: 20px;
+  flex-direction: row;
+  display: flex;
 }
 
 button {
-	color: #313131;
-	font-family: 'Raleway', sans-serif;
-	box-shadow: 1px 2px 4px gray;
-	font-size: 30px;
-	margin-right: 3%;
+  color: #313131;
+  font-family: "Raleway", sans-serif;
+  box-shadow: 1px 2px 4px gray;
+  font-size: 30px;
+  margin-right: 3%;
 
-	background-color: #b0b8ac;
-	border: 3px solid #535353;
-	border-radius: 20px;
+  background-color: #b0b8ac;
+  border: 1px solid #535353;
+  /* border-radius: 20px; */
 
-	width: 18rem;
-	height: 5rem;
+  width: 18rem;
+  height: 5rem;
 
-	cursor: pointer;
-	margin-bottom: 2rem;
-	transition: background-color 0.5s;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: background-color 0.5s;
 }
 
 button:hover {
-	background-color:#535353;
-	color: #b0b8ac;
+  background-color: #535353;
+  color: #b0b8ac;
 }
 
 button:active {
-	opacity: 0.7;
+  opacity: 0.7;
 }
 
 .descriere {
-	color: var(--lgrey);
-	text-shadow: 1px 2px 4px black;
-	font-family: 'Raleway', sans-serif;
-	font-size: 25px;
-
+  color: var(--lgrey);
+  text-shadow: 1px 2px 4px black;
+  font-family: "Raleway", sans-serif;
+  font-size: 40px;
 }
 
 .logo-image {
-    width: 80%; 
-    height: auto;
-	padding-bottom: 2%;
+  width: 80%;
+  height: auto;
+  padding-top: 2%;
 }
 
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
 
-
-@media(max-width: 900px) {
-	.container {
-		flex-direction: column;
-	}
-
-	.stanga, .dreapta {
-		width: 90vw;
-	}
+  .stanga,
+  .dreapta {
+    width: 90vw;
+  }
 }
 
-@media(max-width: 500px) {
-	button {
-		width: 14rem;
-		height: 4rem;
-
-	}
+@media (max-width: 500px) {
+  button {
+    width: 14rem;
+    height: 4rem;
+  }
 }
