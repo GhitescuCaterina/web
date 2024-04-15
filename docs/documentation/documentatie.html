@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>vroomData documentation</title>
+        <link rel="stylesheet" type="text/css" href="documentatie.css">
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Raleway"
+        />
+        <link rel="shortcut icon" href="../pictures/logo.png" type="image/x-icon" />
+    </head>
+    <body>
+        <header>
+            <h1>vroomData (Auto Park Smart Explorer) specifications</h1>
+            <div id="authors">
+                <h2>Authors</h2>
+                <ul>
+                    <li>
+                        <p>Caterina Ghitescu (3X)</p>
+                        <ul>
+                            <li>
+                                <a href="mailto:ghitescucaterina@gmail.com">
+                                    ghitescucaterina@gmail.com
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Stefan Iftime (3X)</p>
+                        <ul>
+                            <li>
+                                <a href="mailto:iftime.stefan99@gmail.com">
+                                    iftime.stefan99@gmail.com
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="contents">
+                <h2>Contents</h2>
+                <ol>
+                    <li>
+                        <a href="#introduction">Introduction</a>
+                        <ol>
+                            <li>
+                                <a href="#purpose">Purpose</a>
+                            </li>
+                            <li>
+                                <a href="#document-conventions">Document Conventions</a>
+                            </li>
+                            <li>
+                                <a href="#intended-audience-and-reading-suggestions">Intended Audience and Reading Suggestions</a>
+                            </li>
+                            <li>
+                                <a href="#product-scope">Product Scope</a>
+                            </li>
+                            <li>
+                                <a href="#references">References</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#overall-description">Overall Description</a>
+                        <ol>
+                            <li>
+                                <a href="#product-perspective">Product Perspective</a>
+                            </li>
+                            <li>
+                                <a href="#product-functions">Product Functions</a>
+                            </li>
+                            <li>
+                                <a href="#user-classes-and-characteristics">User Classes and Characteristics</a>
+                            </li>
+                            <li>
+                                <a href="#operating-environment">Operating Environment</a>
+                            </li>
+                            <li>
+                                <a href="#design-and-implementation-constraints">Design and Implementation Constraints</a>
+                            </li>
+                            <li>
+                                <a href="#user-documentation">User Documentation</a>
+                            </li>
+                            <li>
+                                <a href="#assumptions-and-dependencies">Assumptions and Dependencies</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="external-interface-requirements">External Interface Requirements</a>
+                        <ol>
+                            <li>
+                                <a href="#user-interfaces">User Interfaces</a>
+                            </li>
+                            <li>
+                                <a href="#hardware-interfaces">Hardware Interfaces</a>
+                            </li>
+                            <li>
+                                <a href="#software-interfaces">Software Interfaces</a>
+                            </li>
+                            <li>
+                                <a href="#communications-interfaces">Communications Interfaces</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#system-features">System Features</a>
+                        <ol>
+                            <li>
+                                <a href="#system-functions">Authentication</a>
+                            </li>
+                            <li>
+                                <a href="#error-handling">Error Handling</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#other-non-functional-requirements">Other Non Functional Requirements</a>
+                        <ol>
+                            <li>
+                                <a href="#performance-requirements">Performance Requirements</a>
+                            </li>
+                            <li>
+                                <a href="#safety-requirements">Safety Requirements</a>
+                            </li>
+                            <li>
+                                <a href="#legal-requirements">Security Requirements</a>
+                            </li>
+                            <li>
+                                <a href="#regulatory-requirements">Regulatory Requirements</a>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+            <section id="introduction">
+                <h2><span>1.</span> Introduction</h2>
+                <section id="purpose">
+                    <h3><span>1.1</span> Purpose</h3>
+                    <p>
+                        TBD
+                    </p>
+                <section id="scope">
+                    <h3><span>1.2</span> Document Conventions</h3>
+                    <p>
+                        TBD
+                    </p>
+                </section>
+                
+                <section id="intended-audience-and-reading-suggestions">
+                    <h3><span>1.3</span> Intended Audience and Reading Suggestions</h3>
+                    <p>
+                        TBD
+                    </p>
+                </section>
+                <section id="product-scope">
+                    <h3><span>1.4</span> Product Scope</h3>
+                    <p>
+                        "vroomData (Auto Park Smart Explorer)" is a project aimed at providing a thorough analysis of Romania's automotive landscape over the past decade. It utilizes a proprietary REST/GraphQL API to offer users a platform for exploring and comparing various aspects of the country's auto park statistics.                    </p>
+                    <p>
+                        Through vroomData, users can access and visualize data on vehicle registrations, types of vehicles, fuel types, and ownership trends. The platform offers intuitive interfaces and advanced filtering options for easy navigation and extraction of insights.
+                    </p>
+                    <p>
+                        vroomData generates diverse visualizations, including graphical representations and cartographic visualizations using specialized web services. Users can export statistics and visualizations in CSV, WebP, and SVG formats for further analysis or integration into reports and presentations.
+                    </p>
+                    <p>
+                        Overall, vroomData serves as a valuable resource for researchers, policymakers, industry professionals, and enthusiasts interested in understanding the dynamics of Romania's auto industry.
+                    </p>
+                </section>
+                <section id="references">
+                    <h3><span>1.5</span> References</h3>
+                    <ol>
+                        <li>
+                            <a href="https://disepciuc.github.io/tehnologii-web/proiecte.html#">
+                                Initial requirements regarding the project</a>, presented by our teacher, Mr. Isepciuc Daniel.
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/GhitescuCaterina/web">
+                                The initial view regarding the general structure and the design of the web application</a>, realised by the team formed of:
+                                <a href="https://github.com/GhitescuCaterina">
+                                    Caterina Ghitescu</a> and
+                                <a href="https://github.com/stefangiftime">
+                                    Stefan Iftime</a>
+                            </a>
+                        </li>
+                    </ol>
+                </section>
+            </section>
+            <section>
+                <h2><span>2.</span> Overall Description</h2>
+                <section id="product-perspective">
+                    <h3><span>2.1</span> Product Perspective</h3>
+                    <p>
+                        TBD
+                    </p>
+                </section>
+                <section id="product-functions">
+                    <h3><span>2.2</span> Product Functions</h3>
+                    <p>
+                        Here's a list of major functions in the implementation of the "vroomData (Auto Park Smart Explorer)" project:                    </p>
+                    <ul>
+                        <li>
+                            <b>Data Retrieval</b>: Function to fetch public data related to Romania's auto park from the REST/GraphQL API.                        </li>
+                        <li>
+                            <b>Data Processing</b>: Function to process the retrieved data, including cleaning, formatting, and organizing it for analysis.                        </li>
+                        <li>
+                            <b>Filtering</b>: Functionality to allow users to filter data based on various criteria such as vehicle type, fuel type, region, and time period.
+                        </li>
+                        <li>
+                            <b>Statistical Analysis</b>: Functions to calculate and present statistical metrics such as averages, totals, trends, and distributions.
+                        </li>
+                        <li>
+                            <b>Visualization Generation</b>: Functions to generate graphical representations of data, including charts, graphs, and histograms to visually convey insights.                        </li>
+                        <li>
+                            <b>Cartographic Visualization</b>: Functions to integrate with specialized web services for generating cartographic visualizations, such as maps showing spatial distribution of vehicle registrations.
+                        </li>
+                        <li>
+                            <b>Exporting</b>: Functions to enable users to export data, statistics, and visualizations in formats like CSV, WebP, and SVG for further analysis or integration into external documents.
+                        </li>
+                        <li>
+                            <b>User Authentication and Authorization</b>: Functions to manage user authentication and authorization, ensuring secure access to the platform and its functionalities.
+                        </li>
+                        <li>
+                            <b>User Interface</b>: Functions to develop and maintain the user interface, providing an intuitive and user-friendly experience for interacting with the platform.
+                        </li>
+                        <li>
+                            <b>Documentation</b>: Functions to document the project, including user guides, API documentation, and code documentation to facilitate usage and development.
+                        </li>
+                        <li>
+                            <b>Testing</b>: Functions to create and execute test cases to ensure the reliability, functionality, and performance of the platform.
+                        </li>
+                        <li>
+                            <b>Deployment</b>: Functions to deploy the application to web servers or cloud platforms, ensuring accessibility and scalability for users.
+                        </li>
+                        
+                    </ul>
+                </section>
+                <section id="user-classes-and-characteristics">
+                    <h3><span>2.3</span> User Classes and Characteristics</h3>
+                    <p>
+                        The "vroomData (Auto Park Smart Explorer)" project caters to two primary user classes: administrators and analysts.                    </p>
+                    <p>
+                        Administrators are granted extensive privileges within the platform. They have the authority to manage the overall system, including user accounts and data access. Administrators can create, edit, and delete user accounts, ensuring the smooth functioning of the platform. They also have the ability to invite other users to access the platform and can oversee a list of users with access permissions.
+                    </p>
+                    <p>
+                        Analysts, on the other hand, are the users invited by administrators to utilize the platform for data analysis. While they cannot perform administrative tasks like creating or deleting accounts, analysts have the capability to explore and manipulate data within the confines of their access permissions. They can view and modify data related to the auto park statistics, enabling them to derive insights and make informed decisions.
+                     </p>
+                    <p>
+                        Both administrators and analysts have the option to create personal accounts, providing them with access to the platform's functionalities. They can log in to their accounts securely and delete them if necessary.
+                    </p>
+                </section>
+                <section id="operating-environment">
+                    <h3><span>2.4</span> Operating Environment</h3>
+                    <p>
+                        This application is designed to be used on a web browser, so it can be accessed from any device that has an internet connection and a web browser installed. The application is designed to be used on a desktop computer, but it can also be used on a mobile device, as it is responsive and it can be used on any screen size.
+                    </p>
+                </section>
+                <section id="design-and-implementation-constraints">
+                    <h3><span>2.5</span> Design and Implementation Constraints</h3>
+                    <p>
+                        TBD
+                    </p>
+                </section>
+                <section id="user-documentation">
+                    <h3><span>2.6</span> User Documentation</h3>
+                    <p>
+                        This entire document can be considered as the user documentation of the "vroomData" web application, as it contains all the information that a user needs to know about the application in order to use it.
+                    </p>
+                </section>
+                <section id="assumptions-and-dependencies">
+                    <h3><span>2.7</span> Assumptions and Dependencies</h3>
+                    <p>
+                        In order to function at its maximum potential, the "vroomData" web application needs to be connected to the internet, as it uses an external database to store the information related to the profiles of the users. The application also needs to be connected to the internet in order to be able to download the files needed.
+                    </p>
+                    <p>
+                        No external hardware is required in order to use the "vroomData" web application, as it can be used on any device that has an internet connection and a web browser installed.
+                    </p>
+                </section>
+            </section>
+            <section id="external-interface-requirements">
+                <h2><span>3.</span> External Interface Requirements</h2>
+                <section id="user-interfaces">
+                    <h3><span>3.1</span> User Interfaces</h3>
+                    <p>
+                        In order to have access to the "vroomData" web application, a user needs to have an account. The user can be redirected to create account by clicking on the “Sign Up” button right under the "Welcome!" message displayed on the home page of the application.
+                    </p>
+                    <figure>
+                        <img src="../pictures/welcome.png" alt="Welcome page">
+                        <figcaption><span>1.1 </span>Welcome page of the vroomData web application</figcaption>
+                    </figure>
+                    <p>
+                        To create an account, the user needs to enter their e-mail, first name, last name, date of birth, password and they also need to confirm their password.
+                    </p>
+                    <p>
+                        After the user has entered all the required information, they can click on the “Sign Up” button in order to create their account.
+                    </p>
+                    <figure>
+                        <img src="../pictures/signup.png" alt="Sign up page">
+                        <figcaption><span>1.2 </span>Sign up page of the vroomData web application</figcaption>
+                    </figure>
+                    <p>
+                        After the user has created their account, they can log in to the application by entering their e-mail and password by pressing "Log in!" on the home page of the application.
+                    </p>
+                    <figure>
+                        <img src="../pictures/login.png" alt="Login page">
+                        <figcaption><span>1.3 </span>Log in page of the vroomData web application</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../pictures/about.png" alt="About us page">
+                        <figcaption><span>1.4 </span>Details of the vroomData web application</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../pictures/contact.png" alt="Contact page">
+                        <figcaption><span>1.5 </span>Contact us page for the vroomData web application</figcaption>
+                    </figure>
+                </section>
+                <section id="hardware-interfaces">
+                    <h3><span>3.2</span> Hardware Interfaces</h3>
+                    <p>
+                        TBD
+                    </p>
+                </section>
+                <section id="software-interfaces">
+                    <h3><span>3.3</span> Software Interfaces</h3>
+                    <p>
+                        TBD
+                    </p>
+                </section>
+                <section id="communications-interfaces">
+                    <h3><span>3.4</span> Communications Interfaces</h3>
+                    <p>
+                        TBD
+                    </p>
+                </section>
+            </section>
+            <section id="system-features">
+                <h2><span>4.</span> System Features</h2>
+                <section id="authentification">
+                    <h3><span>4.1</span> Authentification</h3>
+                    <h4><span>4.1.1</span> Description and Priority</h4>
+                    <p>
+                        The authentification system is used to verify the identity of the user. The user needs to enter their e-mail and password in order to log in to the application. The user can also create an account by entering their e-mail, first name, last name, date of birth, password and they also need to confirm their password. 
+                    </p>
+                    <p>
+                        The authentification system is used in the following situations:
+                    </p>
+                    <ul>
+                        <li>
+                            The user wants to log in to the application.
+                        </li>
+                        <li>
+                            The user wants to create an account.
+                        </li>
+                    </ul>
+                    <p>
+                        The authentification system is a very important feature of the vroomData web application, as it is the only way to verify the identity of the user and to make sure that the user is the only one who has access to the information related to the user's account.
+                    </p>
+                    <h4><span>4.1.2</span> Stimulus/Response Sequence List</h4>
+                    <p>
+                        The following stimulus/response sequence list describes the authentification system:
+                    </p>
+                    <ol>
+                        <li>
+                            The user enters their e-mail, first name, last name, date of birth, password and they also need to confirm their password in order to create an account.
+                        </li>
+                        <li>
+                            If all the information is correct, the user may continue by clicking on the “Sign Up” button.
+                        </li>
+                        <li>
+                            After all this, the user is redirected to the home page of the application.
+                        </li>
+                    </ol>
+                    <p>
+                        If any of the information is incorrect, the user will be notified and an account will not be created.
+                    </p>
+                    <h4><span>4.1.3</span> Functional Requirements</h4>
+                    <p>
+                        The authentification system has the following functional requirements:
+                    </p>
+                    <ul>
+                        <li>
+                            The user needs to enter their e-mail, first name, last name, date of birth, password and they also need to confirm their password in order to create an account.
+                        </li>
+                        <li>
+                            The user needs to enter their e-mail and password in order to log in to the application.
+                        </li>
+                    </ul>
+                </section>
+                <section id="exporting-CSV-JSON-file">
+                    <h3><span>4.2</span> Exporting a CSV/WebP/SVG file</h3>
+                    <h4><span>4.2.1</span> Description and Priority</h4>
+                    <p>
+                        The exporting a CSV/WebP/SVG file system is used to export a CSV/WebP/SVG file with all the information related to the auto park information</sup></a>.
+                    </p>
+                    <p>
+                        The exporting a CSV/WebP/SVG file system is a very important feature of the vroomData web application, as it allows the user to export a file containing all the information related to the auto park information such that a backup can be made, should the vroomData web application be unavailable.
+                    </p>
+                    <h4><span>4.2.2</span> Stimulus/Response Sequence List</h4>
+                    <p>
+                        The following stimulus/response sequence list describes the exporting a CSV/JSON file system:
+                    </p>
+                    <ol>
+                        <li>
+                            The user clicks on the “Export CSV/WebP/SVG” button.
+                        </li>
+                        <li>
+                            The user selects the format of the file that they want to export.
+                        </li>
+                        <li>
+                            The user may continue by clicking on the “Export” button.
+                        </li>
+                    </ol>
+                    <h4><span>4.2.3</span> Functional Requirements</h4>
+                    <p>
+                        TBD
+                    </p>
+                </section>
+            </section>
+            <section id="other-non-functional-requirements">
+                <h2><span>5.</span> Other Non Functional Requirements</h2>
+                <section id="performance-requirements">
+                    <h3><span>5.1</span> Performance Requirements</h3>
+                    <p>
+                        TBD
+                    </p>
+                </section>
+                <section id="safety-requirements">
+                    <h3><span>5.2</span> Safety Requirements</h3>
+                    <p>
+                        TBD
+                    </p>
+                </section>
+                <section id="security-requirements">
+                    <h3><span>5.3</span> Security Requirements</h3>
+                    <p>
+                        When a user creates an account, the application will send an email to the email address that the user provided, in order to verify that the email address is valid. The user will have to click on a link in the email in order to verify the email address and activate the account. The user will not be able to log in to the application until the email address is verified.<sup><a href="#footnote">[*]</a></sup>
+                    </p>
+                    <p>
+                        The data kept by the application regarding the users' profiles is not shared with any third party. The data is only used by the application and the users that have access to the profiles.
+                    </p>
+                    <p>
+                        Regarding the security of the application, the passwords of the users are stored in the database in an encrypted form, using an algorithm we will choose later. The passwords are not stored in plain text.
+                    </p>
+                </section>
+                <section id="software-quality-attributes">
+                    <h3><span>5.4</span> Regulatory Requirements</h3>
+                    <p>
+                        TBD
+                    </p>
+                </section>
+            </section>
+            <section id="footnote">
+                <h2>Footnotes</h2>
+                [*] These implementations are related to some extra features that we think would be useful for the purpose of the application. We hope that we will have enough time to try to implement them in the future.
+            </section>
+    </body>
