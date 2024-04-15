@@ -1,0 +1,67 @@
+:root {
+    --purple: #bbabdb;
+    --blue: #d6e5fa;
+}
+
+html {
+    background: linear-gradient(90deg, #535353 0%, #b0b8ac 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background: linear-gradient(270deg, #8d8d8d 0%, #b0b8ac 100%);
+    border: 1px solid white;
+    box-shadow: 1px 2px 4px gray;
+    height: max-content;
+    width: 80vw;
+    border-radius: 30px;
+    margin: 5%;
+    padding: 5rem;
+    padding-top: 1rem;
+    text-align: justify;
+    font-family: "Raleway", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    border-bottom: 1px solid gray;
+}
+
+h3 {
+    text-indent: 5%;
+}
+
+h4 {
+    text-indent: 10%;
+}
+
+p {
+    text-indent: 5%;
+}
+
+h4 + p {
+    text-indent: 10%;
+}
+
+ul p {
+    text-indent: 0%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border: 1px solid gray;
+}
+
+figcaption {
+    text-align: center;
+}
