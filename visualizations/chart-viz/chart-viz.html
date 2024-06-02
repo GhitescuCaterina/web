@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Park Data Visualization</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        .controls {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Vizualizare Parc Auto</h1>
+        <div class="controls">
+            <label for="brandSelect">Alege o marca auto:</label>
+            <select id="brandSelect">
+                <!-- Options will be dynamically populated -->
+            </select>
+            <label for="yearSelect">Alege un an:</label>
+            <select id="yearSelect">
+                <!-- Options will be dynamically populated -->
+            </select>
+            <button id="fetchDataButton">Vizualizeaza!</button>
+        </div>
+        <canvas id="vehicleChart" width="400" height="200"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const brandSelect = document.getElementById('brandSelect');
+            const yearSelect = document.getElementById('yearSelect');
+            const fetchDataButton = document.getElementById('fetchDataButton');
+            const ctx = document.getElementById('vehicleChart').getContext('2d');
+            let vehicleChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: [],
+                    datasets: [{
+                        label: 'Numar total vehicule',
+                        data: [],
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // Fetch unique brands to populate the dropdown
+            fetch('getBrands.php')
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(brand => {
+                    const option = document.createElement('option');
+                    option.value = brand;
+                    option.textContent = brand;
+                    brandSelect.appendChild(option);
+                });
+            });
+
+            // Fetch unique years to populate the dropdown
+            fetch('getYears.php')
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(year => {
+                    const option = document.createElement('option');
+                    option.value = year;
+                    option.textContent = year;
+                    yearSelect.appendChild(option);
+                });
+            });
+
+            fetchDataButton.addEventListener('click', () => {
+                const selectedBrand = brandSelect.value;
+                const selectedYear = yearSelect.value;
+                fetch(`getData.php?brand=${encodeURIComponent(selectedBrand)}&year=${encodeURIComponent(selectedYear)}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        console.error('Error from server:', data.error);
+                        return;
+                    }
+
+                    // Process new data
+                    const labels = data.map(vehicle => `${vehicle.MARCA} (${vehicle.ANUL_STATISTICII})`);
+                    const totalVehicles = data.map(vehicle => vehicle.TOTAL_VEHICULE);
+
+                    // Add new data to the chart
+                    labels.forEach((label, index) => {
+                        vehicleChart.data.labels.push(label);
+                        vehicleChart.data.datasets[0].data.push(totalVehicles[index]);
+                    });
+
+                    vehicleChart.update();
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
