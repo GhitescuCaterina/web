@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Romania Map</title>
+  <style>
+    .tooltip {
+      position: absolute;
+      background-color: white;
+      border: 1px solid black;
+      padding: 5px;
+      display: none;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div class="tooltip" id="tooltip"></div>
+  <object type="image/svg+xml" data="romania.svg" id="romania-map"></object>
+  <div>
+    <label for="filter-year">Filter by Year:</label>
+    <select id="filter-year">
+        <option value="all">All Years</option>
+    </select>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const map = document.getElementById('romania-map');
+      const filterYear = document.getElementById('filter-year');
+      const tooltip = document.getElementById('tooltip');
+
+      fetch('api/getYears.php')
+        .then(response => response.json())
+        .then(data => {
+          data.forEach(year => {
+            const option = document.createElement('option');
+            option.value = year;
+            option.textContent = year;
+            filterYear.appendChild(option);
+          });
+        });
+
+      // Fetch and display data initially
+      fetchDataAndDisplay();
+      
+      // Fetch data from the server with filter
+      function fetchDataAndDisplay() {
+        const yearValue = filterYear.value;
+        let url = `api/getMapdata.php?year=${yearValue}`;
+        fetch(url)
+          .then(response => response.json())
+          .then(data => {
+            displayData(data);
+    
+          });
+      }
+
+      // Display data on the map
+      function displayData(data) {
+        const svgDoc = map.contentDocument;
+
+        // Clear previous tooltips and reset styles
+        svgDoc.querySelectorAll('path').forEach(path => {
+          path.removeEventListener('mouseover', handleMouseOver);
+          path.removeEventListener('mouseout', handleMouseOut);
+          path.style.fill = ''; // Reset color
+          path.removeAttribute('title'); // Remove tooltip
+        });
+
+        data.forEach(item => {
+          const elements = svgDoc.getElementsByClassName(item.JUDET);
+          
+          if (elements.length > 0) {
+            const label = elements[0];
+            element = svgDoc.getElementById(label.id)
+            console.log(element);
+            // Update the element with data
+            element.style.fill = 'blue'; 
+            element.dataset.tooltip = `Judet: ${item.JUDET}<br>Total Automobile: ${Intl.NumberFormat().format(item.TOTAL_JUDET)}`;
+            // Add event listeners for tooltips
+            element.addEventListener('mouseover', handleMouseOver);
+            element.addEventListener('mouseout', handleMouseOut);
+          }
+        });
+      }
+
+      // Tooltip handlers
+      function handleMouseOver(event) {
+        const target = event.target;
+        const tooltipText = target.dataset.tooltip;
+        tooltip.innerHTML = tooltipText;
+        tooltip.style.display = 'block';
+        tooltip.style.left = `${event.pageX + 10}px`;
+        tooltip.style.top = `${event.pageY + 10}px`;
+      }
+
+      function handleMouseOut() {
+        tooltip.style.display = 'none';
+      }
+
+      // Handle filter changes
+      filterYear.addEventListener('change', fetchDataAndDisplay);
+
+      // Update tooltip position on mouse move
+      document.addEventListener('mousemove', (event) => {
+        if (tooltip.style.display === 'block') {
+          tooltip.style.left = `${event.pageX + 10}px`;
+          tooltip.style.top = `${event.pageY + 10}px`;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
