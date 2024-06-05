@@ -62,7 +62,7 @@
             });
 
             // Fetch unique brands to populate the dropdown
-            fetch('getBrands.php')
+            fetch('api/getBrands.php')
             .then(response => response.json())
             .then(data => {
                 data.forEach(brand => {
@@ -74,7 +74,7 @@
             });
 
             // Fetch unique years to populate the dropdown
-            fetch('getYears.php')
+            fetch('api/getYears.php')
             .then(response => response.json())
             .then(data => {
                 data.forEach(year => {
@@ -88,7 +88,7 @@
             fetchDataButton.addEventListener('click', () => {
                 const selectedBrand = brandSelect.value;
                 const selectedYear = yearSelect.value;
-                fetch(`getData.php?brand=${encodeURIComponent(selectedBrand)}&year=${encodeURIComponent(selectedYear)}`)
+                fetch(`api/getData.php?brand=${encodeURIComponent(selectedBrand)}&year=${encodeURIComponent(selectedYear)}`)
                 .then(response => response.json())
                 .then(data => {
                     if (data.error) {
