@@ -16,6 +16,7 @@
   </style>
 </head>
 <body>
+  <button id="export-svg">Export as SVG</button>
   <div class="tooltip" id="tooltip"></div>
   <object type="image/svg+xml" data="romania.svg" id="romania-map"></object>
   <div>
@@ -29,6 +30,7 @@
       const map = document.getElementById('romania-map');
       const filterYear = document.getElementById('filter-year');
       const tooltip = document.getElementById('tooltip');
+      const exportButton = document.getElementById('export-svg');
 
       fetch('api/getYears.php')
         .then(response => response.json())
@@ -109,6 +111,19 @@
           tooltip.style.top = `${event.pageY + 10}px`;
         }
       });
+
+      exportButton.addEventListener('click', () => {
+        const svgDoc = map.contentDocument;
+        const serializer = new XMLSerializer();
+        const svgString = serializer.serializeToString(svgDoc.documentElement);
+        const blob = new Blob([svgString], { type: 'image/svg+xml;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'romania-map.svg';
+        a.click();
+        URL.revokeObjectURL(url);
+  });
     });
   </script>
 </body>
