@@ -15,6 +15,9 @@
         .controls {
             margin-bottom: 20px;
         }
+        .export-buttons {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -37,6 +40,10 @@
             </select>
         </div>
         <canvas id="vehicleChart" width="400" height="200"></canvas>
+        <div class="export-buttons">
+            <button id="exportWebPButton">Exporta ca WebP</button>
+            <button id="exportCSVButton">Exporta ca CSV</button>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
@@ -142,6 +149,28 @@
                     vehicleChart.config.options.plugins.legend.display = false;
                 }
                 vehicleChart.update();
+            });
+
+            exportWebPButton.addEventListener('click', () => {
+                const link = document.createElement('a');
+                link.download = 'chart.webp';
+                link.href = vehicleChart.toBase64Image('image/webp');
+                link.click();
+            });
+
+            exportCSVButton.addEventListener('click', () => {
+                const labels = vehicleChart.data.labels;
+                const data = vehicleChart.data.datasets[0].data;
+                let csvContent = 'Marca,Numar total vehicule\n';
+                labels.forEach((label, index) => {
+                    csvContent += `${label},${data[index]}\n`; 
+                });
+
+                const blob = new Blob([csvContent], { type: 'text/csv' });
+                const link = document.createElement('a');
+                link.download = 'chart.csv';
+                link.href = URL.createObjectURL(blob);
+                link.click();
             });
         });
     </script>
