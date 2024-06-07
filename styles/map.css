@@ -1,0 +1,83 @@
+.tooltip {
+  position: absolute;
+  background-color: white;
+  border: 1px solid black;
+  padding: 5px;
+  display: none;
+  z-index: 10;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+
+.map-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar {
+  width: 20%;
+  font-family: "Raleway", sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #b4c6b4;
+  border-left: 1px solid #ccc;
+  font-size: 100%;
+  padding-top: 1%;
+}
+
+object {
+  max-width: 100%;
+  height: auto;
+}
+
+.filter-container {
+  margin-top: 20px;
+}
+
+button {
+  color: #313131;
+  font-family: "Raleway", sans-serif;
+  box-shadow: 1px 2px 4px gray;
+  font-size: 20px;
+
+  background-color: #b0b8ac;
+  border: 1px solid #535353;
+  /* border-radius: 20px; */
+
+  width: 13rem;
+  height: 3.5rem;
+
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: background-color 0.5s;
+  margin-left: 2rem;
+}
+
+button:hover {
+  background-color: #535353;
+  color: #b0b8ac;
+}
+
+button:active {
+  opacity: 0.7;
+}

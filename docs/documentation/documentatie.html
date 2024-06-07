@@ -4,11 +4,11 @@
         <meta charset="UTF-8">
         <title>vroomData documentation</title>
         <link rel="stylesheet" type="text/css" href="documentatie.css">
+        <link rel="shortcut icon" href="../pictures/logo.png" type="image/x-icon" />
         <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Raleway"
         />
-        <link rel="shortcut icon" href="../pictures/logo.png" type="image/x-icon" />
     </head>
     <body>
         <header>
@@ -48,10 +48,7 @@
                                 <a href="#purpose">Purpose</a>
                             </li>
                             <li>
-                                <a href="#document-conventions">Document Conventions</a>
-                            </li>
-                            <li>
-                                <a href="#intended-audience-and-reading-suggestions">Intended Audience and Reading Suggestions</a>
+                                <a href="#intended-audience-and-reading-suggestions">Intended Audience</a>
                             </li>
                             <li>
                                 <a href="#product-scope">Product Scope</a>
@@ -122,13 +119,7 @@
                                 <a href="#performance-requirements">Performance Requirements</a>
                             </li>
                             <li>
-                                <a href="#safety-requirements">Safety Requirements</a>
-                            </li>
-                            <li>
                                 <a href="#legal-requirements">Security Requirements</a>
-                            </li>
-                            <li>
-                                <a href="#regulatory-requirements">Regulatory Requirements</a>
                             </li>
                         </ol>
                     </li>
@@ -139,23 +130,33 @@
                 <section id="purpose">
                     <h3><span>1.1</span> Purpose</h3>
                     <p>
-                        TBD
+                        vroomData is a web-based tool designed to facilitate the visualization and multi-criteria comparison of public data regarding the auto park in Romania over the past ten years. By utilizing a proprietary REST/GraphQL API, the application aims to provide users with comprehensive and interactive statistics, visualizations, and geographic representations of the automotive data. Users can export the generated statistics and visualizations in various formats, including CSV, WebP, and SVG.
                     </p>
-                <section id="scope">
-                    <h3><span>1.2</span> Document Conventions</h3>
-                    <p>
-                        TBD
-                    </p>
-                </section>
-                
                 <section id="intended-audience-and-reading-suggestions">
-                    <h3><span>1.3</span> Intended Audience and Reading Suggestions</h3>
+                    <h3><span>1.2</span> Intended Audience</h3>
                     <p>
-                        TBD
+                        The primary users of the APa (Auto Park Smart Explorer) application include:
+                        <ul>
+                            <li>
+                                Data Analysts: Professionals who analyze automotive data to identify trends, patterns, and insights over the last decade.
+                            </li>
+                            <li>
+                                Government Officials: Authorities and policymakers who need to understand the dynamics of the auto park in Romania to make informed decisions.
+                            </li>
+                            <li>
+                                Researchers and Academics: Scholars conducting studies on automotive trends, environmental impact, and transportation systems.
+                            </li>
+                            <li>
+                                General Public: Individuals interested in exploring and understanding the evolution of the automotive landscape in Romania.
+                            </li>
+                            <li>
+                                Business Analysts: Market analysts and strategists in the automotive industry who need data-driven insights for business planning and decision-making.
+                            </li>
+                        </ul>
                     </p>
                 </section>
                 <section id="product-scope">
-                    <h3><span>1.4</span> Product Scope</h3>
+                    <h3><span>1.3</span> Product Scope</h3>
                     <p>
                         "vroomData (Auto Park Smart Explorer)" is a project aimed at providing a thorough analysis of Romania's automotive landscape over the past decade. It utilizes a proprietary REST/GraphQL API to offer users a platform for exploring and comparing various aspects of the country's auto park statistics.                    </p>
                     <p>
@@ -169,7 +170,7 @@
                     </p>
                 </section>
                 <section id="references">
-                    <h3><span>1.5</span> References</h3>
+                    <h3><span>1.4</span> References</h3>
                     <ol>
                         <li>
                             <a href="https://disepciuc.github.io/tehnologii-web/proiecte.html#">
@@ -193,7 +194,9 @@
                 <section id="product-perspective">
                     <h3><span>2.1</span> Product Perspective</h3>
                     <p>
-                        TBD
+                        vroomData is envisioned as a sophisticated, user-friendly web application that leverages modern web technologies to offer comprehensive analysis and visualization of Romania's automotive data. The product is designed to cater to various stakeholders, including data analysts, government officials, researchers, and the general public. It provides a seamless interface for accessing, exploring, and exporting detailed automotive statistics and trends over the past decade.
+
+                        The application integrates multiple data visualization techniques and geographic mapping services to present data in an insightful and engaging manner. Users can interact with the data through a responsive web interface, making it accessible on various devices, including desktops, tablets, and smartphones.
                     </p>
                 </section>
                 <section id="product-functions">
@@ -260,7 +263,23 @@
                 <section id="design-and-implementation-constraints">
                     <h3><span>2.5</span> Design and Implementation Constraints</h3>
                     <p>
-                        TBD
+                        <ul>
+                            <li>
+                                Data Accuracy: Ensuring the data retrieved and displayed is accurate and reliable.
+                            </li>
+                            <li>
+                                Performance: Handling large datasets efficiently for quick response times.
+                            </li>
+                            <li>
+                                Security: Implementing robust security measures for data protection.
+                            </li>
+                            <li>
+                                Scalability: Accommodating future growth in data volume and user base.
+                            </li>
+                            <li>
+                                Compatibility: Ensuring the application works across major web browsers and devices.
+                            </li>
+                        </ul>
                     </p>
                 </section>
                 <section id="user-documentation">
@@ -315,23 +334,70 @@
                         <img src="../pictures/contact.png" alt="Contact page">
                         <figcaption><span>1.5 </span>Contact us page for the vroomData web application</figcaption>
                     </figure>
+                    <figure>
+                        <img src="../pictures/chart.png" alt="Chart view page">
+                        <figcaption><span>1.6 </span>Chart view page of the vroomData web application</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../pictures/map.png" alt="Map view page">
+                        <figcaption><span>1.7 </span>Map view page of the vroomData web application</figcaption>
+                    </figure>
                 </section>
                 <section id="hardware-interfaces">
                     <h3><span>3.2</span> Hardware Interfaces</h3>
                     <p>
-                        TBD
+                        <ul>
+                            <li>
+                                Servers: The backend services, including the REST/GraphQL API, run on robust server infrastructure capable of handling high volumes of requests and large datasets. These servers should be equipped with sufficient CPU, memory, and storage resources to ensure optimal performance.
+                            </li>
+                            <li>
+                                User Devices: The application is designed to be accessed from a variety of user devices, including:
+                                <ul>
+                                    <li>Desktops/Laptops: Modern web browsers (e.g., Chrome, Firefox, Edge, Safari) are supported.</li>
+                                    <li>Tablets and Smartphones: The responsive design ensures usability on mobile devices, providing a consistent experience across different screen sizes and resolutions.
+                                    </li>
+                                </ul>
+                            </li>                                
+                        </ul>
                     </p>
                 </section>
                 <section id="software-interfaces">
                     <h3><span>3.3</span> Software Interfaces</h3>
                     <p>
-                        TBD
-                    </p>
+                        <ul>
+                            
+                        The APa application is built using a combination of HTML, CSS, PHP, and JavaScript to create a dynamic and responsive user interface.
+<li>
+HTML (HyperText Markup Language): Used for structuring the web pages and presenting content to the user.
+</li>
+<li>
+CSS (Cascading Style Sheets): Employed for styling the web pages, ensuring a visually appealing and consistent design.
+</li>
+<li>
+PHP (Hypertext Preprocessor): Utilized for server-side scripting, handling data retrieval, processing, and interactions with the REST/GraphQL API.
+</li>
+<li>
+JavaScript: Used for client-side scripting, enabling dynamic content updates, interactive visualizations, and improved user experience through frameworks like D3.js for data visualization and Leaflet.js for map integration.
+</li>
+</ul></p>
                 </section>
                 <section id="communications-interfaces">
                     <h3><span>3.4</span> Communications Interfaces</h3>
                     <p>
-                        TBD
+                        <ul>
+                            <li>
+                            REST API: The application communicates with the backend services using RESTful APIs. These APIs are designed to be stateless and use standard HTTP methods (GET, POST, PUT, DELETE) for data operations.
+</li>
+<li>
+                            GraphQL API: An alternative communication interface that allows clients to request specific data structures, reducing over-fetching and under-fetching of data.
+</li>
+<li>
+WebSockets: For real-time data updates and notifications, WebSockets may be used to maintain a persistent connection between the client and server.
+</li>
+<li>
+HTTPS: All communications between the client and server are encrypted using HTTPS to ensure data security and integrity.
+</li>
+                        </ul>
                     </p>
                 </section>
             </section>
@@ -414,7 +480,21 @@
                     </ol>
                     <h4><span>4.2.3</span> Functional Requirements</h4>
                     <p>
-                        TBD
+                        <ul>
+                            <li>
+                            User Authentication: Users should be able to create accounts, log in, and manage their profiles securely.
+</li><li>
+                            Data Retrieval: The application should allow users to retrieve automotive data based on various filters such as year, make, model, and type.
+</li><li>
+                            Data Visualization: Users should be able to view data in multiple formats, including bar charts, line graphs, pie charts, and geographic maps.
+</li><li>
+                            Export Functionality: Users should be able to export data and visualizations in CSV, WebP, and SVG formats.
+</li><li>
+                            Interactive Interface: The application should provide a responsive and interactive interface, allowing users to interact with the visualizations and maps dynamically.
+</li><li>
+                            Search and Filter: Users should have robust search and filter options to narrow down the data they are interested in.
+</li>
+                        </ul>
                     </p>
                 </section>
             </section>
@@ -423,17 +503,18 @@
                 <section id="performance-requirements">
                     <h3><span>5.1</span> Performance Requirements</h3>
                     <p>
-                        TBD
-                    </p>
-                </section>
-                <section id="safety-requirements">
-                    <h3><span>5.2</span> Safety Requirements</h3>
-                    <p>
-                        TBD
+                        <ul>
+                            <li>
+                        Response Time: The application should have a fast response time, with data retrieval and visualization generation taking no more than 3 seconds for standard queries.
+</li><li>
+                        Scalability: The system should handle up to 10,000 concurrent users without performance degradation.
+</li><li>
+Data Volume: The backend should efficiently manage large datasets, capable of processing and serving data for over 10 million vehicle records.
+</li></ul>
                     </p>
                 </section>
                 <section id="security-requirements">
-                    <h3><span>5.3</span> Security Requirements</h3>
+                    <h3><span>5.2</span> Security Requirements</h3>
                     <p>
                         When a user creates an account, the application will send an email to the email address that the user provided, in order to verify that the email address is valid. The user will have to click on a link in the email in order to verify the email address and activate the account. The user will not be able to log in to the application until the email address is verified.<sup><a href="#footnote">[*]</a></sup>
                     </p>
@@ -442,12 +523,6 @@
                     </p>
                     <p>
                         Regarding the security of the application, the passwords of the users are stored in the database in an encrypted form, using an algorithm we will choose later. The passwords are not stored in plain text.
-                    </p>
-                </section>
-                <section id="software-quality-attributes">
-                    <h3><span>5.4</span> Regulatory Requirements</h3>
-                    <p>
-                        TBD
                     </p>
                 </section>
             </section>

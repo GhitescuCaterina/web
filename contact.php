@@ -1,3 +1,18 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    // If the user is not logged in, display a popup message and redirect
+    echo "<script type='text/javascript'>
+        alert('You need to be logged in to access this page.');
+        window.location.href = 'login.html';
+    </script>";
+    exit();
+}
+
+// User is logged in, proceed with the rest of the page
+?>
+
 <!DOCTYPE html>
 
 <html>

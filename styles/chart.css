@@ -1,0 +1,59 @@
+body {
+  font-family: Raleway, sans-serif;
+  background-color: #c7ccc4;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+.vizualizeaza {
+  color: #313131;
+  font-family: "Raleway", sans-serif;
+  box-shadow: 1px 2px 4px gray;
+  font-size: 13px;
+  margin-right: 1%;
+  margin-left: 1%;
+
+  background-color: #b0b8ac;
+  border: 1px solid #535353;
+
+  width: 12rem;
+  height: 2rem;
+
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: background-color 0.5s;
+}
+
+.export {
+  color: #313131;
+  font-family: "Raleway", sans-serif;
+  box-shadow: 1px 2px 4px gray;
+  font-size: 20px;
+
+  background-color: #b0b8ac;
+  border: 1px solid #535353;
+
+  width: 13rem;
+  height: 3.5rem;
+
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: background-color 0.5s;
+  margin-left: 2rem;
+}
+
+.export:hover {
+  background-color: #535353;
+  color: #b0b8ac;
+}
+
+.export:active {
+  opacity: 0.7;
+}

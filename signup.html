@@ -14,46 +14,81 @@
   </head>
   <body>
     <div class="signup">
-      <h1 class="title">Sign up 
-      </h1>
+      <h1 class="title">Sign up</h1>
       <div class="stanga">
         <div class="item">
           <p>E-mail</p>
-          <input type="text" name="E-mail" />
+          <input type="text" id="email" name="email" />
         </div>
         <div class="item">
           <p>Last name</p>
-          <input type="text" name="Last name" />
+          <input type="text" id="last_name" name="last_name" />
         </div>
         <div class="item">
           <p>First name</p>
-          <input type="text" name="First name" />
+          <input type="text" id="first_name" name="first_name" />
         </div>
         <div class="item">
           <p>Date of birth</p>
-          <input type="date" name="Date of birth" />
+          <input type="date" id="dob" name="dob" />
         </div>
         <div class="item">
           <p>Password</p>
-          <input type="password" name="Password" />
+          <input type="password" id="password" name="password" />
         </div>
         <div class="item">
           <p>Confirm password</p>
-          <input type="password" name="Confirm password" />
+          <input
+            type="password"
+            id="confirm_password"
+            name="confirm_password"
+          />
         </div>
-
         <div class="buttons">
+          <button class="signup-button" type="button" onclick="register()">
+            Sign up
+          </button>
           <button
             class="login-button"
-            type="submit"
+            type="button"
             onclick="window.location ='login.html'"
           >
-            login<button onclick="window.location ='main_page.html'">
-              sign up
-            </button>
+            Login
           </button>
         </div>
       </div>
     </div>
+    <script>
+      async function register() {
+        const email = document.getElementById("email").value;
+        const last_name = document.getElementById("last_name").value;
+        const first_name = document.getElementById("first_name").value;
+        const dob = document.getElementById("dob").value;
+        const password = document.getElementById("password").value;
+        const confirm_password =
+          document.getElementById("confirm_password").value;
+
+        if (password !== confirm_password) {
+          alert("Passwords do not match!");
+          return;
+        }
+
+        const response = await fetch("api/register.php", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, last_name, first_name, dob, password }),
+        });
+
+        const result = await response.json();
+        if (result.success) {
+          alert("Registration successful!");
+          window.location = "welcome.php";
+        } else {
+          alert("Registration failed: " + result.message);
+        }
+      }
+    </script>
   </body>
 </html>

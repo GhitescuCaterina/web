@@ -14,22 +14,50 @@
   </head>
   <body>
     <div class="login">
-        <h1 class="title">Login</h1>
-        <section>
-          <p>E-mail</p>
-          <input type="text" name="email" />
-        </section>
-        <section>
-          <p>Password</p>
-          <input type="password" name="password" />
-        </section>
-        <div class="button-container">
-          <button id="login-button" onclick="window.location ='main_page.html'">login</button>
-          <div class="signup-section">
-              <p>Don't have an account?</p>
-              <button id="signup-button" onclick="window.location ='signup.html'">sign up</button>
-          </div>
-      </div>      
+      <h1 class="title">Login</h1>
+      <section>
+        <p>E-mail</p>
+        <input type="text" id="email" name="email" />
+      </section>
+      <section>
+        <p>Password</p>
+        <input type="password" id="password" name="password" />
+      </section>
+      <div class="button-container">
+        <button id="login-button" type="button" onclick="login()">Login</button>
+        <div class="signup-section">
+          <p>Don't have an account?</p>
+          <button
+            id="signup-button"
+            type="button"
+            onclick="window.location ='signup.html'"
+          >
+            Sign up
+          </button>
+        </div>
+      </div>
     </div>
+    <script>
+      async function login() {
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        const response = await fetch("api/login.php", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, password }),
+        });
+
+        const result = await response.json();
+        if (result.success) {
+          alert("Login successful!");
+          window.location = "welcome.php";
+        } else {
+          alert("Login failed: " + result.message);
+        }
+      }
+    </script>
   </body>
 </html>
